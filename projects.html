@@ -16,8 +16,15 @@
   <title>Projects - Kurniawan Hafiz</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- Bootstrap -->
   <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- CSS global -->
+  <link rel="stylesheet" href="./assets/css/global.css">
+
+  <!-- CSS projects -->
+  <link rel="stylesheet" href="./assets/css/projects.css">
+
 </head>
 <body class="page-projects">
 
@@ -56,33 +63,91 @@
           at building things properly.
         </p>
       </div>
+<div class="row g-4">
 
-      <div class="row g-4">
-
-        <!-- Project Card -->
+        <!-- Project Card 1: Skansasi -->
         <div class="col-md-6 col-lg-4">
-          <div class="project-card h-100">
-            <h5>Skansasi Website</h5>
-            <p class="mt-2">
-              A custom school website focusing on layout structure,
-              visual hierarchy, and clean organization.
-            </p>
-            <span class="badge bg-primary">HTML</span>
-            <span class="badge bg-secondary">CSS</span>
+          <div class="project-card h-100 d-flex flex-column overflow-hidden">
+            
+            <!-- Edge-to-Edge Image Wrapper -->
+            <div class="project-img-wrapper">
+              <img src="./assets/img/skansasi-preview.png" alt="Skansasi Website" class="project-img">
+              <div class="project-overlay">
+                <a href="https://skansasi.netlify.app" target="_blank" class="btn btn-light btn-sm rounded-pill fw-bold px-3 py-2 shadow">
+                  <i class="bi bi-box-arrow-up-right me-1"></i> Live Preview
+                </a>
+              </div>
+            </div>
+
+            <!-- Card Content -->
+            <div class="p-4 d-flex flex-column flex-grow-1">
+              <h5 class="fw-bold mb-2">Skansasi Website</h5>
+              <p class="text-muted-custom flex-grow-1 mb-4" style="font-size: 0.95rem;">
+                A custom school website focusing on layout structure, visual hierarchy, and clean organization.
+              </p>
+
+              <!-- Badges -->
+              <div class="mb-4 d-flex gap-2">
+                <span class="badge-skill badge-html">HTML</span>
+                <span class="badge-skill badge-css ms-1">CSS</span>
+              </div>
+
+              <!-- Footer -->
+              <div class="d-flex justify-content-between align-items-center mt-auto pt-3 border-top border-secondary border-opacity-25">
+                <a href="https://skansasi.netlify.app" target="_blank" class="text-decoration-none fw-semibold text-primary project-link">
+                  Details <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+                <a href="https://github.com/kurniawanhafiz" target="_blank" class="text-muted-custom text-decoration-none fs-5 icon-link-hover" aria-label="View Source Code">
+                  <i class="bi bi-github"></i>
+                </a>
+              </div>
+            </div>
+
           </div>
         </div>
 
+        <!-- Project Card 2: Portfolio -->
         <div class="col-md-6 col-lg-4">
-          <div class="project-card h-100">
-            <h5>Portfolio Experiment</h5>
-            <p class="mt-2">
-              An ongoing personal portfolio built to explore design systems,
-              shared styles, and scalable structure.
-            </p>
-            <span class="badge bg-primary">Bootstrap</span>
-            <span class="badge bg-secondary">JS</span>
+          <div class="project-card h-100 d-flex flex-column overflow-hidden">
+            
+            <!-- Edge-to-Edge Image Wrapper -->
+            <div class="project-img-wrapper">
+              <img src="./assets/img/portfolio-preview.png" alt="Portfolio" class="project-img">
+              <div class="project-overlay">
+                <a href="index.html" class="btn btn-light btn-sm rounded-pill fw-bold px-3 py-2 shadow">
+                  <i class="bi bi-box-arrow-up-right me-1"></i> Live Preview
+                </a>
+              </div>
+            </div>
+
+            <!-- Card Content -->
+            <div class="p-4 d-flex flex-column flex-grow-1">
+              <h5 class="fw-bold mb-2">Portfolio Experiment</h5>
+              <p class="text-muted-custom flex-grow-1 mb-4" style="font-size: 0.95rem;">
+                An ongoing personal portfolio built to explore design systems, shared styles, and scalable structure.
+              </p>
+
+              <!-- Badges -->
+              <div class="mb-4 d-flex gap-2">
+                <span class="badge-skill badge-bootstrap">Bootstrap</span>
+                <span class="badge-skill badge-js ms-1">JS</span>
+              </div>
+
+              <!-- Footer -->
+              <div class="d-flex justify-content-between align-items-center mt-auto pt-3 border-top border-secondary border-opacity-25">
+                <a href="index.html" class="text-decoration-none fw-semibold text-primary project-link">
+                  Details <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+                <a href="https://github.com/kurniawanhafiz" target="_blank" class="text-muted-custom text-decoration-none fs-5 icon-link-hover">
+                  <i class="bi bi-github"></i>
+                </a>
+              </div>
+            </div>
+
           </div>
         </div>
+
+      </div>
 
       </div>
     </div>

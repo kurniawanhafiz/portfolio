@@ -9,40 +9,34 @@
   <!-- Icon -->
   <link rel="icon" href="/favicon2.ico" type="image/x-icon">
 
-  <!-- Bootstrap CSS (Sesuai source aslimu) -->
+  <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css">
-
-  <!-- Custom CSS bawaan web kamu untuk variabel warna & tema -->
-  <link rel="stylesheet" href="./assets/css/style.css">
-
-  <!-- CSS khusus untuk Linktree (File Terpisah) -->
-  <link rel="stylesheet" href="./assets/css/linktree.css">
-
   <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="./assets/bootstrap/bootstrap-icons/bootstrap-icons.css">
+
+  <!-- CSS khusus untuk Linktree yang SEKARANG INDEPENDEN -->
+  <link rel="stylesheet" href="./assets/css/linktree.css">
 </head>
 <body> <!-- Class dark-mode/light-mode akan di-handle oleh theme.js kamu -->
 
   <div class="linktree-container">
     
-    <div class="d-flex justify-content-between align-items-center mb-3">
-      <a href="index.html" class="btn btn-primary btn-cta btn-lg">
-        <i class="bi bi-globe"></i>
+<div class="d-flex justify-content-between align-items-center mb-4">
+      <!-- Tombol Globe -->
+      <a href="index.html" class="btn btn-primary btn-cta btn-icon">
+        <i class="bi bi-globe fs-5"></i>
       </a>
-  <!-- Theme Toggle (Ditaruh di kanan atas agar fungsionalitas dark/light tetap ada) -->
-      <button id="themeToggle" class="btn btn-outline-custom btn-sm">
-        🌙
+      <!-- Theme Toggle -->
+      <button id="themeToggle" class="btn btn-outline-custom btn-icon">
+        <span class="fs-5">🌙</span>
       </button>
     </div>
-
+    
     <!-- Bagian Profil -->
     <div class="linktree-profile text-center">
-      <!-- Sesuaikan path gambar profile-mu -->
       <img src="./assets/img/logo2.jpg" alt="Kurniawan Hafiz" class="linktree-avatar">
       <h1 class="linktree-name">Kurniawan Hafiz</h1>
       <p class="linktree-username">@kurniawanhafizzz</p>
-      
-      <!-- Bio sesuai dengan yang ada di gambar referensi -->
       <p class="linktree-bio mt-2">
         ini kumpulan link drive yaa
       </p>
@@ -109,10 +103,7 @@
 
   </div>
 
-  <!-- Bootstrap JS -->
   <script src="./assets/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Theme JS (Agar tombol dark/light mode-nya tetap bekerja) -->
   <script src="./assets/js/theme.js"></script>
 </body>
 </html>
