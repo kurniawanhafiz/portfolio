@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://kurniawanhafiz.my.id/sitemap.xml
+Sitemap: https://kurniawanhafiz.web.id/sitemap.xml
