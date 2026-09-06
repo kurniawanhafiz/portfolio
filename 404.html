@@ -19,13 +19,29 @@
 
 <body class="dark-mode">
 
-<!-- Navbar (biar konsisten sama index) -->
+<!-- ================= NAVBAR ================= -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
   <div class="container">
-    <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="/">
-      <img src="./assets/img/logo2.jpg" width="32" height="32" class="rounded-circle">
+    <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
+      <img src="./assets/img/logo2.jpg" alt="Logo" width="32" height="32" class="rounded-circle">
       Kurniawan Hafiz
     </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+        <li class="nav-item"><a class="nav-link" href="index.html" data-en="Home" data-id="Beranda">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="achievements.html" data-en="Achievements" data-id="Prestasi">Achievements</a></li>
+        <li class="nav-item"><a class="nav-link" href="projects.html" data-en="Projects" data-id="Proyek">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html" data-en="Contact" data-id="Kontak">Contact</a></li>
+        <!-- Theme & Lang Toggles -->
+        <li class="nav-item d-flex align-items-center mt-2 mt-lg-0">
+          <button id="themeToggle" class="btn btn-outline-light btn-sm ms-lg-3">🌙</button>
+          <button id="langToggle" class="btn btn-outline-light btn-sm ms-2">ID</button>
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>
 
@@ -42,21 +58,30 @@
     <h1 class="display-1 fw-bold text-primary">404</h1>
 
     <!-- Message -->
-    <h3 class="mt-3">Halaman tidak ditemukan</h3>
+    <h3 class="mt-3" 
+        data-en="Page Not Found" 
+        data-id="Halaman tidak ditemukan">
+      Page Not Found
+    </h3>
 
-    <p class="text-muted-custom mt-3 mx-auto" style="max-width:600px;">
-      Halaman yang kamu cari mungkin sudah dipindahkan, dihapus,
-      atau URL yang dimasukkan salah.
+    <p class="text-muted-custom mt-3 mx-auto" style="max-width:600px;"
+       data-en="The page you are looking for might have been removed, had its name changed, or is temporarily unavailable."
+       data-id="Halaman yang kamu cari mungkin sudah dipindahkan, dihapus, atau URL yang dimasukkan salah.">
+      The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.
     </p>
 
     <!-- Buttons -->
     <div class="mt-5">
-      <a href="/" class="btn btn-primary btn-cta btn-lg me-2 mt-2">
-        <i class="bi bi-house"></i> Kembali ke Home
+      <a href="/" class="btn btn-primary btn-cta btn-lg me-2 mt-2"
+         data-en="<i class='bi bi-house'></i> Back to Home"
+         data-id="<i class='bi bi-house'></i> Kembali ke Beranda">
+        <i class="bi bi-house"></i> Back to Home
       </a>
 
-      <button onclick="history.back()" class="btn btn-outline-custom btn-lg mt-2">
-        <i class="bi bi-arrow-left"></i> Halaman Sebelumnya
+      <button onclick="history.back()" class="btn btn-outline-custom btn-lg mt-2"
+         data-en="<i class='bi bi-arrow-left'></i> Previous Page"
+         data-id="<i class='bi bi-arrow-left'></i> Halaman Sebelumnya">
+        <i class="bi bi-arrow-left"></i> Previous Page
       </button>
     </div>
 

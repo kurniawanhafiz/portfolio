@@ -50,3 +50,39 @@ if (toggleBtn) {
    RUN
 ========================= */
 initTheme();
+
+
+// ==========================================
+// Language Toggle Logic (EN / ID)
+// ==========================================
+const langToggleBtn = document.getElementById('langToggle');
+const translatableElements = document.querySelectorAll('[data-en][data-id]');
+
+// Cek bahasa dari localStorage, default 'en' (Inggris)
+let currentLang = localStorage.getItem('lang') || 'en';
+
+function setLanguage(lang) {
+  currentLang = lang;
+  localStorage.setItem('lang', lang);
+  
+  // Ubah teks di tombol jadi bahasa kebalikannya
+  if(langToggleBtn) {
+    langToggleBtn.textContent = lang === 'en' ? 'ID' : 'EN';
+  }
+
+  // Ganti isi HTML semua elemen yang punya data-en & data-id
+  translatableElements.forEach(el => {
+    el.innerHTML = el.getAttribute(`data-${lang}`);
+  });
+}
+
+// Event listener buat tombol klik
+if(langToggleBtn) {
+  langToggleBtn.addEventListener('click', () => {
+    const newLang = currentLang === 'en' ? 'id' : 'en';
+    setLanguage(newLang);
+  });
+}
+
+// Eksekusi bahasa saat web pertama kali dimuat
+setLanguage(currentLang);
