@@ -33,22 +33,22 @@
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
   <div class="container">
     <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
-      <img src="./assets/img/logo2.jpg" width="32" height="32" class="rounded-circle">
+      <img src="./assets/img/logo2.jpg" alt="Logo" width="32" height="32" class="rounded-circle">
       Kurniawan Hafiz
     </a>
-
-    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
       <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse" id="navMenu">
       <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link active" href="achievements.html">Achievements</a></li>
-        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        <li class="nav-item">
+        <li class="nav-item"><a class="nav-link" href="index.html" data-en="Home" data-id="Beranda">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="achievements.html" data-en="Achievements" data-id="Prestasi">Achievements</a></li>
+        <li class="nav-item"><a class="nav-link" href="projects.html" data-en="Projects" data-id="Proyek">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html" data-en="Contact" data-id="Kontak">Contact</a></li>
+        <!-- Theme & Lang Toggles -->
+        <li class="nav-item d-flex align-items-center mt-2 mt-lg-0">
           <button id="themeToggle" class="btn btn-outline-light btn-sm ms-lg-3">🌙</button>
+          <button id="langToggle" class="btn btn-outline-light btn-sm ms-2">ID</button>
         </li>
       </ul>
     </div>
@@ -59,7 +59,9 @@
 <section class="section">
   <div class="container text-center mb-5">
 <!--    <small class="text-primary fw-semibold text-uppercase">Prestasi Saya</small> -->
-    <h1 class="fw-bold display-6 mt-2">
+    <h1 class="fw-bold display-6 mt-2" 
+        data-en="Achievements & <span class='text-primary'>Awards</span>" 
+        data-id="Prestasi & <span class='text-primary'>Penghargaan</span>">
       Achievements & <span class="text-primary">Awards</span>
     </h1>
     <div class="mx-auto mt-3" style="width:60px;height:4px;background:#0d6efd;border-radius:10px;"></div>
@@ -81,25 +83,17 @@
             data-image="./assets/img/sertifikat-lksn.webp"
             alt="Sertifikat LKS Nasional">
 
-          <h4 class="fw-bold mb-1">
-            Finalis LKS Tingkat Nasional
+          <h4 class="fw-bold mb-1" data-en="National Finalist of LKS" data-id="Finalis LKS Tingkat Nasional">
+            National Finalist of LKS
           </h4>
-
-          <p class="text-muted-custom mb-2">
-            IT Network Systems Administration
+          <p class="text-muted-custom mb-2">IT Network Systems Administration</p>
+          <p class="text-muted-custom"
+             data-en="Became a <strong>National Finalist</strong> in the <strong>National Student Competency Competition (LKS)</strong> for <strong>IT Network Systems Administration</strong>. This achievement was earned through a series of practical exams covering network configuration, server-client, troubleshooting, and Linux-based system management."
+             data-id="Menjadi <strong>Finalis</strong> pada ajang <strong>Lomba Kompetensi Siswa (LKS) Tingkat Nasional</strong> bidang <strong>IT Network Systems Administration</strong>. Prestasi ini diraih melalui serangkaian ujian praktik meliputi konfigurasi jaringan, server-client, troubleshooting, serta manajemen sistem berbasis Linux.">
+            Became a <strong>National Finalist</strong> in the <strong>National Student Competency Competition (LKS)</strong> for <strong>IT Network Systems Administration</strong>. This achievement was earned through a series of practical exams covering network configuration, server-client, troubleshooting, and Linux-based system management.
           </p>
-          
-          <p class="text-muted-custom">
-                Menjadi <strong>Finalis</strong> pada ajang
-                <strong>Lomba Kompetensi Siswa (LKS) Tingkat Nasional</strong> bidang
-                <strong>IT Network Systems Administration</strong>.
-                Prestasi ini diraih melalui serangkaian ujian praktik meliputi
-                konfigurasi jaringan, server-client, troubleshooting,
-                serta manajemen sistem berbasis Linux.
-            </p>
-
-          <small class="text-muted-custom">
-            2025 · Tingkat Nasional
+          <small class="text-muted-custom" data-en="2025 · National Level" data-id="2025 · Tingkat Nasional">
+            2025 · National Level
           </small>
 
           <div class="mt-3">
@@ -122,25 +116,26 @@
             data-image="./assets/img/sertifikat-lksprov.webp"
             alt="Sertifikat LKS Provinsi">
 
-          <h4 class="fw-bold mb-1">
-            Juara 1 LKS Tingkat Provinsi
+          <h4 class="fw-bold mb-1" 
+              data-en="1st Place at Provincial LKS" 
+              data-id="Juara 1 LKS Tingkat Provinsi">
+            1st Place at Provincial LKS
           </h4>
 
           <p class="text-muted-custom mb-2">
             IT Network & Server Administration
           </p>
 
-          <p class="text-muted-custom">
-                Meraih <strong>Juara 1</strong> pada ajang
-                <strong>Lomba Kompetensi Siswa (LKS) Tingkat Provinsi Sumatera Barat</strong> bidang
-                <strong>IT Network Systems Administration</strong>.
-                Prestasi ini diraih melalui serangkaian ujian praktik meliputi
-                konfigurasi jaringan, server-client, troubleshooting,
-                serta manajemen sistem berbasis Linux.
-            </p>
+          <p class="text-muted-custom"
+             data-en="Achieved <strong>1st Place</strong> at the <strong>West Sumatra Provincial Student Competency Competition (LKS)</strong> for <strong>IT Network Systems Administration</strong>. This achievement was earned through a series of practical exams covering network configuration, server-client, troubleshooting, and Linux-based system management."
+             data-id="Meraih <strong>Juara 1</strong> pada ajang <strong>Lomba Kompetensi Siswa (LKS) Tingkat Provinsi Sumatera Barat</strong> bidang <strong>IT Network Systems Administration</strong>. Prestasi ini diraih melalui serangkaian ujian praktik meliputi konfigurasi jaringan, server-client, troubleshooting, serta manajemen sistem berbasis Linux.">
+            Achieved <strong>1st Place</strong> at the <strong>West Sumatra Provincial Student Competency Competition (LKS)</strong> for <strong>IT Network Systems Administration</strong>. This achievement was earned through a series of practical exams covering network configuration, server-client, troubleshooting, and Linux-based system management.
+          </p>
 
-          <small class="text-muted-custom">
-            2025 · Tingkat Provinsi Sumatera Barat
+          <small class="text-muted-custom" 
+                 data-en="2025 · West Sumatra Provincial Level" 
+                 data-id="2025 · Tingkat Provinsi Sumatera Barat">
+            2025 · West Sumatra Provincial Level
           </small>
 
           <div class="mt-3">
@@ -164,25 +159,26 @@
             data-image="./assets/img/sertifikat-lkskab.webp"
             alt="Sertifikat LKS Kabupaten">
 
-          <h4 class="fw-bold mb-1">
-            Juara 2 LKS Tingkat Kabupaten
+          <h4 class="fw-bold mb-1" 
+              data-en="2nd Place at Regency LKS" 
+              data-id="Juara 2 LKS Tingkat Kabupaten">
+            2nd Place at Regency LKS
           </h4>
 
           <p class="text-muted-custom mb-2">
             IT Network & System Administration
           </p>
 
-          <p class="text-muted-custom">
-                Meraih <strong>Juara 2</strong> pada ajang
-                <strong>Lomba Kompetensi Siswa (LKS) Tingkat Kabupaten Sijunjung</strong> bidang
-                <strong>IT Network Systems Administration</strong>.
-                Prestasi ini diraih melalui serangkaian ujian praktik meliputi
-                konfigurasi jaringan, server-client, troubleshooting,
-                serta manajemen sistem berbasis Linux.
-            </p>
+          <p class="text-muted-custom"
+             data-en="Achieved <strong>2nd Place</strong> at the <strong>Sijunjung Regency Student Competency Competition (LKS)</strong> for <strong>IT Network Systems Administration</strong>. This achievement was earned through a series of practical exams covering network configuration, server-client, troubleshooting, and Linux-based system management."
+             data-id="Meraih <strong>Juara 2</strong> pada ajang <strong>Lomba Kompetensi Siswa (LKS) Tingkat Kabupaten Sijunjung</strong> bidang <strong>IT Network Systems Administration</strong>. Prestasi ini diraih melalui serangkaian ujian praktik meliputi konfigurasi jaringan, server-client, troubleshooting, serta manajemen sistem berbasis Linux.">
+            Achieved <strong>2nd Place</strong> at the <strong>Sijunjung Regency Student Competency Competition (LKS)</strong> for <strong>IT Network Systems Administration</strong>. This achievement was earned through a series of practical exams covering network configuration, server-client, troubleshooting, and Linux-based system management.
+          </p>
 
-          <small class="text-muted-custom">
-            2025 · Tingkat Kabupaten Sijunjung
+          <small class="text-muted-custom" 
+                 data-en="2025 · Sijunjung Regency Level" 
+                 data-id="2025 · Tingkat Kabupaten Sijunjung">
+            2025 · Sijunjung Regency Level
           </small>
 
           <div class="mt-3">
@@ -198,14 +194,16 @@
   <!-- 👉 DUPLIKASI CARD DI ATAS UNTUK ACHIEVEMENT LAIN -->
     </div>
     
-    <!-- ========== NAVIGATION BUTTONS ========== -->
+<!-- ========== NAVIGATION BUTTONS ========== -->
     <div class="text-center mt-4 pt-3">
       <div class="d-flex justify-content-center gap-3 flex-wrap">
-        <a href="index.html" class="btn btn-outline-custom d-flex align-items-center gap-2">
-          <i class="bi bi-house-door"></i> Back to Home
+        <a href="/" class="btn btn-outline-custom d-flex align-items-center gap-2">
+          <i class="bi bi-house-door"></i> 
+          <span data-en="Back to Home" data-id="Kembali ke Beranda">Back to Home</span>
         </a>
-        <a href="projects.html" class="btn btn-primary btn-cta d-flex align-items-center gap-2">
-          Go to Projects <i class="bi bi-arrow-right"></i>
+        <a href="/projects" class="btn btn-primary btn-cta d-flex align-items-center gap-2">
+          <span data-en="Go to Projects" data-id="Lihat Proyek">Go to Projects</span>
+          <i class="bi bi-arrow-right"></i>
         </a>
       </div>
     </div>
@@ -238,9 +236,7 @@
 <!-- ================= SCRIPTS ================= -->
 <script src="./assets/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="./assets/js/theme.js"></script>
-<script src="./assets/js/archive.js"></script>
+<script src="./assets/js/achieve.js"></script>
 
 </body>
 </html>
-
-
