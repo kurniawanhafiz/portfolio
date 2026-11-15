@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | Kurniawan Hafiz</title>
+  <meta name="description" content="Contact Kurniawan Hafiz to discuss projects, ideas or collaborations in cloud computing and network administration." />
+  <meta name="author" content="Kurniawan Hafiz" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0a0d12" />
+  <link rel="canonical" href="https://kurniawanhafiz.web.id/contact" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+  <meta property="og:title" content="Contact | Kurniawan Hafiz" />
+  <meta property="og:description" content="Contact Kurniawan Hafiz to discuss projects, ideas or collaborations in cloud computing and network administration." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://kurniawanhafiz.web.id/contact" />
+  <meta property="og:image" content="https://kurniawanhafiz.web.id/img/og.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <script>
+    (function () {
+      var d = document.documentElement;
+      try { d.dataset.theme = localStorage.getItem('theme') || 'dark'; } catch (e) { d.dataset.theme = 'dark'; }
+      d.classList.add('js');
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) d.classList.add('no-motion');
+      setTimeout(function () { var c = document.querySelector('.curtain'); if (c) c.remove(); }, 6000);
+    })();
+  </script>
+  <noscript><style>.js [data-reveal]{opacity:1!important;transform:none!important}.curtain{display:none!important}</style></noscript>
+  <script type="module" src="/src/main.js"></script>
+</head>
+<body data-page="contact">
+  <div class="curtain is-boot" aria-hidden="true"><div class="curtain__text"></div></div>
+  <!--@icons-->
+  <!--@nav-->
+
+  <main>
+    <section class="page-head">
+      <div class="container">
+        <div class="eyebrow" data-reveal>contact.sh</div>
+        <h1 data-reveal data-en="Get in <span class='accent'>touch</span>" data-id="Hubungi <span class='accent'>saya</span>">Get in <span class="accent">touch</span></h1>
+        <p class="section-lead" data-reveal data-en="If you want to discuss a project, share ideas or just say hi, feel free to reach out." data-id="Jika ingin mendiskusikan proyek, berbagi ide, atau sekadar menyapa, jangan ragu menghubungi saya.">If you want to discuss a project, share ideas or just say hi, feel free to reach out.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:2rem">
+      <div class="container contact">
+        <div class="contact__list">
+          <a class="card contact__item" href="mailto:fizallinone@gmail.com?subject=Hello%20Hafiz"  data-reveal><span class="ico"><svg class="icon"><use href="#i-mail"/></svg></span><span><small>email</small><b>fizallinone@gmail.com</b></span></a>
+          <div class="card contact__item" data-reveal><span class="ico"><svg class="icon"><use href="#i-pin"/></svg></span><span><small>location</small><b>Pekanbaru, Riau, Indonesia</b></span></div>
+          <a class="card contact__item" href="https://github.com/kurniawanhafiz" target=_blank rel=noopener data-reveal><span class="ico"><svg class="icon"><use href="#i-github"/></svg></span><span><small>github</small><b>github.com/kurniawanhafiz</b></span></a>
+          <a class="card contact__item" href="https://linkedin.com/in/kurniawanhafiz" target=_blank rel=noopener data-reveal><span class="ico"><svg class="icon"><use href="#i-linkedin"/></svg></span><span><small>linkedin</small><b>in/kurniawanhafiz</b></span></a>
+          <a class="card contact__item" href="https://instagram.com/kurniawanhafizzz" target=_blank rel=noopener data-reveal><span class="ico"><svg class="icon"><use href="#i-instagram"/></svg></span><span><small>instagram</small><b>@kurniawanhafizzz</b></span></a>
+        </div>
+
+        <form class="card form" id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-reveal>
+          <input type="hidden" name="form-name" value="contact" />
+          <p class="hp"><label>Don't fill this out: <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
+          <div class="field"><label for="name" data-en="name" data-id="nama">name</label><input id="name" name="name" type="text" autocomplete="name" required /></div>
+          <div class="field"><label for="email" data-en="email" data-id="email">email</label><input id="email" name="email" type="email" autocomplete="email" required /></div>
+          <div class="field"><label for="message" data-en="message" data-id="pesan">message</label><textarea id="message" name="message" required></textarea></div>
+          <button class="btn btn--primary" type="submit" data-magnetic><span data-en="Send Message" data-id="Kirim Pesan">Send Message</span><svg class="icon icon-arrow"><use href="#i-arrow"/></svg></button>
+          <p class="form__note" id="formNote" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+  <!--@footer-->
+</body>
+</html>
