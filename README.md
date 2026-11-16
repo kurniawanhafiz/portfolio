@@ -1,4 +1,4 @@
-# Portfolio Kurniawan Hafiz (v3)
+# Portfolio Kurniawan Hafiz
 
 Website portfolio multi-halaman bertema dark tech/terminal, dibangun dengan **Vite** dan **GSAP** (+ ScrollTrigger), di-host di **Netlify**.
 
