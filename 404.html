@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>404 | Kurniawan Hafiz</title>
+  <meta name="description" content="Page not found." />
+  <meta name="author" content="Kurniawan Hafiz" />
+  <meta name="robots" content="noindex" />
+  <meta name="theme-color" content="#0a0d12" />
+  
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+  <meta property="og:title" content="404 | Kurniawan Hafiz" />
+  <meta property="og:description" content="Page not found." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://kurniawanhafiz.web.id/404" />
+  <meta property="og:image" content="https://kurniawanhafiz.web.id/img/og.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <script>
+    (function () {
+      var d = document.documentElement;
+      try { d.dataset.theme = localStorage.getItem('theme') || 'dark'; } catch (e) { d.dataset.theme = 'dark'; }
+      d.classList.add('js');
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) d.classList.add('no-motion');
+      setTimeout(function () { var c = document.querySelector('.curtain'); if (c) c.remove(); }, 6000);
+    })();
+  </script>
+  <noscript><style>.js [data-reveal]{opacity:1!important;transform:none!important}.curtain{display:none!important}</style></noscript>
+  <script type="module" src="/src/main.js"></script>
+</head>
+<body data-page="404">
+  <div class="curtain is-boot" aria-hidden="true"><div class="curtain__text"></div></div>
+  <!--@icons-->
+  <!--@nav-->
+
+  <main>
+    <section class="nf">
+      <div class="container">
+        <div class="nf__code" aria-label="404">404</div>
+        <h1 style="font-size:clamp(1.4rem,3vw,2rem)" data-hero data-en="Page not found" data-id="Halaman tidak ditemukan">Page not found</h1>
+        <p data-hero data-en="The page you are looking for might have been moved, deleted, or the URL is wrong." data-id="Halaman yang kamu cari mungkin sudah dipindahkan, dihapus, atau URL yang dimasukkan salah.">The page you are looking for might have been moved, deleted, or the URL is wrong.</p>
+        <div class="btn-row" data-hero style="justify-content:center">
+          <a class="btn btn--primary" href="/"><span data-en="Back to Home" data-id="Kembali ke Beranda">Back to Home</span><svg class="icon icon-arrow"><use href="#i-arrow"/></svg></a>
+          <button class="btn btn--ghost" type="button" onclick="history.back()"><span data-en="Previous Page" data-id="Halaman Sebelumnya">Previous Page</span></button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!--@footer-->
+</body>
+</html>

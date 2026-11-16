@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects | Kurniawan Hafiz</title>
+  <meta name="description" content="Websites and infrastructure labs by Kurniawan Hafiz: Netlify-deployed sites, AWS high-availability architecture, Cisco/MikroTik and Linux server labs." />
+  <meta name="author" content="Kurniawan Hafiz" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0a0d12" />
+  <link rel="canonical" href="https://kurniawanhafiz.web.id/projects" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+  <meta property="og:title" content="Projects | Kurniawan Hafiz" />
+  <meta property="og:description" content="Websites and infrastructure labs by Kurniawan Hafiz: Netlify-deployed sites, AWS high-availability architecture, Cisco/MikroTik and Linux server labs." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://kurniawanhafiz.web.id/projects" />
+  <meta property="og:image" content="https://kurniawanhafiz.web.id/img/og.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <script>
+    (function () {
+      var d = document.documentElement;
+      try { d.dataset.theme = localStorage.getItem('theme') || 'dark'; } catch (e) { d.dataset.theme = 'dark'; }
+      d.classList.add('js');
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) d.classList.add('no-motion');
+      setTimeout(function () { var c = document.querySelector('.curtain'); if (c) c.remove(); }, 6000);
+    })();
+  </script>
+  <noscript><style>.js [data-reveal]{opacity:1!important;transform:none!important}.curtain{display:none!important}</style></noscript>
+  <script type="module" src="/src/main.js"></script>
+</head>
+<body data-page="projects">
+  <div class="curtain is-boot" aria-hidden="true"><div class="curtain__text"></div></div>
+  <!--@icons-->
+  <!--@nav-->
+
+  <main>
+    <section class="page-head">
+      <div class="container">
+        <div class="eyebrow" data-reveal>projects/</div>
+        <h1 data-reveal data-en="Things I've <span class='accent'>built</span>" data-id="Yang sudah saya <span class='accent'>bangun</span>">Things I've <span class="accent">built</span></h1>
+        <p class="section-lead" data-reveal data-en="Websites I ship and infrastructure labs I've designed, from school systems to competition-grade cloud and network setups." data-id="Website yang saya rilis dan lab infrastruktur yang saya rancang, dari sistem sekolah sampai setup cloud dan jaringan level kompetisi.">Websites I ship and infrastructure labs I've designed, from school systems to competition-grade cloud and network setups.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:2rem">
+      <div class="container">
+        <div class="filters" data-reveal role="group" aria-label="Filter projects">
+          <button class="filter is-active" type="button" data-filter="all">all</button>
+          <button class="filter" type="button" data-filter="web">web</button>
+          <button class="filter" type="button" data-filter="cloud">cloud</button>
+          <button class="filter" type="button" data-filter="network">network</button>
+          <button class="filter" type="button" data-filter="systems">systems</button>
+        </div>
+        <div class="projects">
+        <article class="card project" data-kind="web" data-reveal>
+          <div class="project__media"><img src="/img/skansasi-preview.webp" alt="Skansasi school website preview" width="1200" height="683" loading="lazy" /></div>
+          <div class="project__body">
+            <h3>Skansasi Website</h3>
+            <p data-en="A custom school website focusing on layout structure, visual hierarchy and clean organization. Deployed on Netlify." data-id="Website sekolah kustom yang berfokus pada struktur tata letak, hierarki visual, dan pengorganisasian yang rapi. Di-deploy di Netlify.">A custom school website focusing on layout structure, visual hierarchy and clean organization. Deployed on Netlify.</p>
+            <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Bootstrap</span><span class="tag">Netlify</span></div>
+            <div class="project__foot"><a href="https://skansasi.netlify.app" target="_blank" rel="noopener"><span data-en="Live Preview" data-id="Lihat Langsung">Live Preview</span><svg class="icon"><use href="#i-external"/></svg></a><a href="https://github.com/kurniawanhafiz" target="_blank" rel="noopener" aria-label="GitHub"><svg class="icon"><use href="#i-github"/></svg></a></div>
+          </div>
+        </article>
+        <article class="card project" data-kind="web" data-reveal>
+          <div class="project__media project__media--art"><svg viewBox="0 0 400 225" role="img" aria-label="Code editor illustration">
+  <rect x="40" y="30" width="320" height="165" rx="12" class="net-node"/>
+  <circle cx="58" cy="48" r="4" fill="#ff5f57"/><circle cx="72" cy="48" r="4" fill="#febc2e"/><circle cx="86" cy="48" r="4" fill="#28c840"/>
+  <path class="net-line" d="M40 62H360"/>
+  <text class="art-code" x="60" y="92"><tspan class="k">gsap</tspan>.timeline()</text>
+  <text class="art-code" x="60" y="116">  .from(<tspan class="k">'.hero'</tspan>, { y: 40 })</text>
+  <text class="art-code" x="60" y="140">  .to(<tspan class="k">'.char'</tspan>, { stagger: .03 })</text>
+  <text class="art-code" x="60" y="172"><tspan class="k">$</tspan> npm run build</text>
+</svg></div>
+          <div class="project__body">
+            <h3>Portfolio Website</h3>
+            <p data-en="This site: a multi-page portfolio built with Vite and GSAP, with dark/light themes, EN/ID toggle and page transitions. Git-based deploy on Netlify with a custom .web.id domain and SSL/TLS." data-id="Situs ini: portofolio multi-halaman dengan Vite dan GSAP, tema gelap/terang, toggle EN/ID, dan transisi halaman. Deploy berbasis Git di Netlify dengan domain .web.id dan SSL/TLS.">This site: a multi-page portfolio built with Vite and GSAP, with dark/light themes, EN/ID toggle and page transitions. Git-based deploy on Netlify with a custom .web.id domain and SSL/TLS.</p>
+            <div class="tags"><span class="tag">Vite</span><span class="tag">GSAP</span><span class="tag">JavaScript</span><span class="tag">Netlify</span></div>
+            <div class="project__foot"><a href="https://github.com/kurniawanhafiz/portfolio" target="_blank" rel="noopener"><span data-en="Source Code" data-id="Kode Sumber">Source Code</span><svg class="icon"><use href="#i-external"/></svg></a><span class="project__kind">web</span></div>
+          </div>
+        </article>
+        <article class="card project" data-kind="cloud" data-reveal>
+          <div class="project__media project__media--diagram"><button type="button" class="media-btn" data-lightbox="/img/aws-topology.svg" data-title="AWS architecture topology, LKS Provincial 2026 (Cloud Computing)" aria-label="View AWS topology diagram"><img src="/img/aws-topology.svg" alt="AWS topology with ALB, three EC2 instances in two Availability Zones, S3, CloudWatch and IAM" width="1280" height="870" loading="lazy" /></button></div>
+          <div class="project__body">
+            <h3>AWS High-Availability Architecture</h3>
+            <p data-en="Competition lab (LKS Cloud Computing): EC2 web servers behind an Elastic Load Balancer, static content on S3, Auto Scaling simulation, CloudWatch monitoring, Security Groups and IAM." data-id="Lab kompetisi (LKS Cloud Computing): web server EC2 di belakang Elastic Load Balancer, konten statis di S3, simulasi Auto Scaling, monitoring CloudWatch, Security Group, dan IAM.">Competition lab (LKS Cloud Computing): EC2 web servers behind an Elastic Load Balancer, static content on S3, Auto Scaling simulation, CloudWatch monitoring, Security Groups and IAM.</p>
+            <div class="tags"><span class="tag">AWS EC2</span><span class="tag">S3</span><span class="tag">ELB</span><span class="tag">CloudWatch</span><span class="tag">IAM</span></div>
+            <div class="project__foot"><span class="project__kind" data-en="LKS Provincial 2026 · 3rd place" data-id="LKS Provinsi 2026 · Juara 3">LKS Provincial 2026 · 3rd place</span></div>
+          </div>
+        </article>
+        <article class="card project" data-kind="network" data-reveal>
+          <div class="project__media project__media--lab"><button type="button" class="media-btn" data-open-lab aria-label="Open interactive network topology"><div class="lab-thumb" id="labThumb"></div><span class="lab-badge" data-en="interactive" data-id="interaktif">interactive</span></button></div>
+          <div class="project__body">
+            <h3>Enterprise Network &amp; Linux Lab</h3>
+            <p data-en="Multi-site enterprise network from the LKSN 2025 Module D, rebuilt in Cisco CML: an ISP, two core sites and two regional branches covering L2 services, OSPF, EIGRP, BGP, IP services and VPN. Explore the topology interactively. Debian 12, MikroTik and Cisco labs from the provincial round complete the picture." data-id="Jaringan enterprise multi-site dari Modul D LKSN 2025 yang dibangun di Cisco CML: ISP, dua site core, dan dua cabang regional dengan L2 services, OSPF, EIGRP, BGP, IP services, dan VPN. Jelajahi topologinya secara interaktif. Lab Debian 12, MikroTik, dan Cisco dari babak provinsi melengkapinya.">Multi-site enterprise network from the LKSN 2025 Module D, rebuilt in Cisco CML: an ISP, two core sites and two regional branches covering L2 services, OSPF, EIGRP, BGP, IP services and VPN. Explore the topology interactively. Debian 12, MikroTik and Cisco labs from the provincial round complete the picture.</p>
+            <div class="tags"><span class="tag">Cisco CML</span><span class="tag">OSPF</span><span class="tag">EIGRP</span><span class="tag">BGP</span><span class="tag">VPN</span><span class="tag">Debian 12</span></div>
+            <div class="project__foot"><span class="project__kind" data-en="LKS National Finalist 2025" data-id="Finalis LKS Nasional 2025">LKS National Finalist 2025</span><button type="button" class="link-btn" data-open-lab><span data-en="Open lab" data-id="Buka lab">Open lab</span><svg class="icon"><use href="#i-arrow"/></svg></button></div>
+          </div>
+        </article>
+        <article class="card project" data-kind="systems" data-reveal>
+          <div class="project__media project__media--diagram"><button type="button" class="media-btn" data-lightbox="/img/linux-env.svg" data-title="Linux environment: Debian 12 firewall, DMZ, internal services and VPN (LKSN 2025 Module A)" aria-label="View Linux environment diagram"><img src="/img/linux-env.svg" alt="Diagram of a Debian 12 network: firewall, internal DNS/LDAP/CA server, DMZ mail and HA web servers, and an OpenVPN client" width="1280" height="870" loading="lazy" /></button></div>
+          <div class="project__body">
+            <h3>Debian 12 Server Infrastructure</h3>
+            <p data-en="Practice build of the LKSN 2025 Module A task: BIND9 DNS, LDAP and an OpenSSL certificate authority on the internal server, a Postfix/Dovecot mail server with Roundcube, HAProxy + Keepalived high-availability web, an nftables firewall with NAT and port forwarding, an OpenVPN server with LDAP login, and Ansible automation." data-id="Latihan pengerjaan soal Modul A LKSN 2025: DNS BIND9, LDAP, dan certificate authority OpenSSL di server internal, mail server Postfix/Dovecot dengan Roundcube, web high-availability HAProxy + Keepalived, firewall nftables dengan NAT dan port forwarding, server OpenVPN dengan login LDAP, serta otomasi Ansible.">Practice build of the LKSN 2025 Module A task: BIND9 DNS, LDAP and an OpenSSL certificate authority on the internal server, a Postfix/Dovecot mail server with Roundcube, HAProxy + Keepalived high-availability web, an nftables firewall with NAT and port forwarding, an OpenVPN server with LDAP login, and Ansible automation.</p>
+            <div class="tags"><span class="tag">Debian 12</span><span class="tag">BIND9</span><span class="tag">LDAP</span><span class="tag">Postfix/Dovecot</span><span class="tag">HAProxy</span><span class="tag">nftables</span><span class="tag">OpenVPN</span></div>
+            <div class="project__foot"><span class="project__kind" data-en="LKS National Finalist 2025 · Module A" data-id="Finalis LKS Nasional 2025 · Modul A">LKS National Finalist 2025 · Module A</span></div>
+          </div>
+        </article>
+        <article class="card project" data-kind="systems" data-reveal>
+          <div class="project__media project__media--diagram"><button type="button" class="media-btn" data-lightbox="/img/windows-env.svg" data-title="Windows environment: AD forest, child domain, S2S VPN and Ansible (LKSN 2025 Module C)" aria-label="View Windows environment diagram"><img src="/img/windows-env.svg" alt="Diagram of an Active Directory forest with a child domain, file/web/DHCP servers, a site-to-site VPN and an Ansible server" width="1280" height="870" loading="lazy" /></button></div>
+          <div class="project__body">
+            <h3>Windows Server Environment &amp; Ansible</h3>
+            <p data-en="Practice build of the LKSN 2025 Module C task: an Active Directory forest with a child domain, DNS, DHCP, IIS with HTTPS and Windows authentication, shared folders with NTFS permissions, FSRM quotas, DFS namespace and replication, and an IKEv2 site-to-site VPN. Routine deployments are automated with Ansible playbooks." data-id="Latihan pengerjaan soal Modul C LKSN 2025: forest Active Directory dengan child domain, DNS, DHCP, IIS dengan HTTPS dan Windows authentication, shared folder dengan NTFS permission, quota FSRM, DFS namespace dan replication, serta site-to-site VPN IKEv2. Deployment rutin diotomatisasi dengan playbook Ansible.">Practice build of the LKSN 2025 Module C task: an Active Directory forest with a child domain, DNS, DHCP, IIS with HTTPS and Windows authentication, shared folders with NTFS permissions, FSRM quotas, DFS namespace and replication, and an IKEv2 site-to-site VPN. Routine deployments are automated with Ansible playbooks.</p>
+            <div class="tags"><span class="tag">Active Directory</span><span class="tag">DNS/DHCP</span><span class="tag">IIS</span><span class="tag">DFS</span><span class="tag">FSRM</span><span class="tag">RRAS VPN</span><span class="tag">Ansible</span></div>
+            <div class="project__foot"><span class="project__kind" data-en="LKS National Finalist 2025 · Module C" data-id="Finalis LKS Nasional 2025 · Modul C">LKS National Finalist 2025 · Module C</span></div>
+          </div>
+        </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="lightbox" id="lightbox" aria-labelledby="lightboxTitle">
+    <div class="lightbox__inner">
+      <div class="lightbox__top"><h3 id="lightboxTitle"></h3><button class="chip-btn chip-btn--icon" type="button" data-close aria-label="Close"><svg class="icon"><use href="#i-close"/></svg></button></div>
+      <img id="lightboxImg" src="" alt="" />
+    </div>
+  </dialog>
+
+  <dialog class="lightbox lab" id="labDialog" aria-labelledby="labTitle">
+    <div class="lightbox__inner lab__inner">
+      <div class="lightbox__top">
+        <h3 id="labTitle" data-en="LKSN 2025 Module D: network topology (Cisco CML)" data-id="LKSN 2025 Modul D: topologi jaringan (Cisco CML)">LKSN 2025 Module D: network topology (Cisco CML)</h3>
+        <button class="chip-btn chip-btn--icon" type="button" data-lab-close aria-label="Close"><svg class="icon"><use href="#i-close"/></svg></button>
+      </div>
+      <div class="lab__bar">
+        <div class="seg" role="group" aria-label="View">
+          <button type="button" class="seg__btn is-active" data-view="zones" data-en="Sites" data-id="Site">Sites</button>
+          <button type="button" class="seg__btn" data-view="routing" data-en="Routing" data-id="Routing">Routing</button>
+        </div>
+        <p class="lab__hint" data-en="Hover or tap a device to see its links. Tap a link to read its interfaces." data-id="Arahkan atau ketuk device untuk melihat link-nya. Ketuk link untuk melihat interface.">Hover or tap a device to see its links. Tap a link to read its interfaces.</p>
+      </div>
+      <div class="lab__body">
+        <div class="lab__canvas" id="labCanvas"></div>
+        <aside class="lab__panel" id="labPanel" aria-live="polite"></aside>
+      </div>
+      <div class="lab__legend" id="labLegend"></div>
+    </div>
+  </dialog>
+  <!--@footer-->
+</body>
+</html>

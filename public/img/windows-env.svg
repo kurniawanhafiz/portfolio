@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 870" font-family="'Segoe UI',Arial,sans-serif">
+<rect width="1280" height="870" fill="#fff"/>
+<text x="40" y="56" font-size="30" font-weight="700" fill="#0f172a">Windows environment: AD forest + child domain, S2S VPN, Ansible</text>
+<text x="40" y="88" font-size="18" fill="#475569">Simplified from the LKSN 2025 Module C task description (no credentials or configs)</text>
+<g stroke-width="3" fill="none">
+<rect x="40" y="130" width="720" height="640" rx="20" fill="#eff6ff" stroke="#3b82f6"/>
+<rect x="800" y="130" width="440" height="400" rx="20" fill="#f0fdf4" stroke="#22c55e"/>
+<rect x="800" y="570" width="440" height="200" rx="20" fill="#faf5ff" stroke="#a855f7"/>
+</g>
+<text x="64" y="168" font-size="22" font-weight="700" fill="#1d4ed8">Forest: itnsa.id · site ITNSA-ID</text>
+<text x="824" y="168" font-size="22" font-weight="700" fill="#15803d">Child: lab.itnsa.id · LAB-ITNSA-ID</text>
+<text x="824" y="608" font-size="22" font-weight="700" fill="#7e22ce">Automation</text>
+<g font-size="20" fill="#0f172a">
+<rect x="70" y="200" width="320" height="190" rx="14" fill="#fff" stroke="#3b82f6" stroke-width="2"/>
+<text x="90" y="236" font-weight="700">CORE · 192.168.1.1</text>
+<text x="90" y="268" font-size="16" fill="#475569">Domain controller, DNS records</text>
+<text x="90" y="296" font-size="16" fill="#475569">Sites &amp; Services, OUs, 767 users</text>
+<text x="90" y="324" font-size="16" fill="#475569">Security groups, home folders, GPO</text>
+<rect x="430" y="200" width="300" height="190" rx="14" fill="#fff" stroke="#3b82f6" stroke-width="2"/>
+<text x="450" y="236" font-weight="700">SRV · 192.168.1.100</text>
+<text x="450" y="268" font-size="16" fill="#475569">IIS (3 HTTPS sites, Win auth)</text>
+<text x="450" y="296" font-size="16" fill="#475569">Shared folders, NTFS permissions</text>
+<text x="450" y="324" font-size="16" fill="#475569">FSRM quotas, DFS namespace</text>
+<rect x="70" y="440" width="320" height="190" rx="14" fill="#fff" stroke="#3b82f6" stroke-width="2"/>
+<text x="90" y="476" font-weight="700">FW · 192.168.1.254</text>
+<text x="90" y="508" font-size="16" fill="#475569">DHCP (scope for clients, DDNS)</text>
+<text x="90" y="536" font-size="16" fill="#475569">RRAS: NAT + IKEv2 site-to-site VPN</text>
+<text x="90" y="564" font-size="16" fill="#475569">2nd DFS namespace + replica target</text>
+<rect x="430" y="440" width="300" height="190" rx="14" fill="#fff" stroke="#3b82f6" stroke-width="2"/>
+<text x="450" y="476" font-weight="700">WORKSTATION · client LAN</text>
+<text x="450" y="508" font-size="16" fill="#475569">Domain member, DHCP client</text>
+<text x="450" y="536" font-size="16" fill="#475569">GPO: maps G: drive and hides</text>
+<text x="450" y="564" font-size="16" fill="#475569">sign-in animation (only here)</text>
+<rect x="830" y="200" width="380" height="140" rx="14" fill="#fff" stroke="#22c55e" stroke-width="2"/>
+<text x="850" y="236" font-weight="700">DC · 10.1.1.10</text>
+<text x="850" y="268" font-size="16" fill="#475569">Child DC, DNS forwarder to CORE</text>
+<text x="850" y="296" font-size="16" fill="#475569">OUs Operator / Member, IIS + mgmt</text>
+<rect x="830" y="370" width="380" height="130" rx="14" fill="#fff" stroke="#22c55e" stroke-width="2"/>
+<text x="850" y="406" font-weight="700">EDGE · 10.1.1.1</text>
+<text x="850" y="438" font-size="16" fill="#475569">Domain member, RRAS: NAT + VPN</text>
+<rect x="830" y="640" width="380" height="100" rx="14" fill="#fff" stroke="#a855f7" stroke-width="2"/>
+<text x="850" y="676" font-weight="700">ansible-srv (Linux)</text>
+<text x="850" y="708" font-size="16" fill="#475569">Playbooks: check, shares, websites</text>
+</g>
+<g stroke="#f59e0b" stroke-width="5" stroke-dasharray="14 9" fill="none">
+<path d="M230 630 V 800 H 785 V 435 H 830"/>
+</g>
+<rect x="330" y="781" width="260" height="38" rx="19" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+<text x="460" y="807" font-size="18" font-weight="700" fill="#92400e" text-anchor="middle">IKEv2 site-to-site VPN (PSK)</text>
+<g stroke="#94a3b8" stroke-width="3" fill="none">
+<path d="M390 295 H 430"/><path d="M230 390 V 440"/><path d="M390 535 H 430"/>
+<path d="M1020 340 V 370"/>
+</g>
+</svg>

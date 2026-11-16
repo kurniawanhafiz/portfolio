@@ -1,0 +1,26 @@
+<header class="nav" id="nav">
+  <div class="nav__inner container">
+    <a class="nav__brand" href="/" aria-label="Kurniawan Hafiz - Home">
+      <img src="/img/avatar-sm.webp" alt="" width="34" height="34" />
+      <span>kurniawan<b>.hafiz</b></span>
+    </a>
+
+    <nav class="nav__links" id="navLinks" aria-label="Main">
+      <a href="/" data-nav="index"><i>01</i><span data-en="Home" data-id="Beranda">Home</span></a>
+      <a href="/achievements" data-nav="achievements"><i>02</i><span data-en="Achievements" data-id="Prestasi">Achievements</span></a>
+      <a href="/projects" data-nav="projects"><i>03</i><span data-en="Projects" data-id="Proyek">Projects</span></a>
+      <a href="/contact" data-nav="contact"><i>04</i><span data-en="Contact" data-id="Kontak">Contact</span></a>
+    </nav>
+
+    <div class="nav__tools">
+      <button class="chip-btn" id="langToggle" type="button" aria-label="Switch language">ID</button>
+      <button class="chip-btn chip-btn--icon" id="themeToggle" type="button" aria-label="Toggle theme">
+        <svg class="icon icon-sun"><use href="#i-sun"/></svg>
+        <svg class="icon icon-moon"><use href="#i-moon"/></svg>
+      </button>
+      <button class="nav__burger" id="navBurger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,186 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1280 870" width="1280" height="870" font-family="'Segoe UI', Arial, Helvetica, sans-serif" role="img" aria-labelledby="t d">
+  <title id="t">Topologi arsitektur AWS website profil UMKM</title>
+  <desc id="d">Pengunjung mengakses Internet Gateway, Application Load Balancer, Target Group, lalu tiga instance EC2 di dua Availability Zone. Gambar diambil dari S3, dimonitor CloudWatch, dan instance memakai IAM role.</desc>
+
+  <defs>
+    <marker id="aMain" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#232F3E"/></marker>
+    <marker id="aBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#147EBA"/></marker>
+    <marker id="aPink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#E7157B"/></marker>
+    <marker id="aRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#DD344C"/></marker>
+
+    <symbol id="ec2" viewBox="0 0 64 64">
+      <rect width="64" height="64" rx="9" fill="#ED7100"/>
+      <g fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round">
+        <rect x="19" y="19" width="26" height="26" rx="2"/>
+        <path d="M25 13v6M32 13v6M39 13v6M25 45v6M32 45v6M39 45v6M13 25h6M13 32h6M13 39h6M45 25h6M45 32h6M45 39h6"/>
+      </g>
+      <rect x="27" y="27" width="10" height="10" fill="#fff"/>
+    </symbol>
+    <symbol id="alb" viewBox="0 0 64 64">
+      <rect width="64" height="64" rx="9" fill="#8C4FFF"/>
+      <g fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round">
+        <circle cx="32" cy="19" r="6"/><circle cx="16" cy="46" r="6"/><circle cx="48" cy="46" r="6"/>
+        <path d="M29 25L19 41M35 25L45 41M22 46h20"/>
+      </g>
+    </symbol>
+    <symbol id="igw" viewBox="0 0 64 64">
+      <rect width="64" height="64" rx="9" fill="#8C4FFF"/>
+      <g fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round">
+        <circle cx="32" cy="32" r="16"/><ellipse cx="32" cy="32" rx="7" ry="16"/><path d="M16 32h32"/>
+      </g>
+    </symbol>
+    <symbol id="s3" viewBox="0 0 64 64">
+      <rect width="64" height="64" rx="9" fill="#7AA116"/>
+      <g fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round">
+        <ellipse cx="32" cy="21" rx="15" ry="5.5"/>
+        <path d="M17 21l4 26q11 6 22 0l4-26"/>
+      </g>
+    </symbol>
+    <symbol id="cw" viewBox="0 0 64 64">
+      <rect width="64" height="64" rx="9" fill="#E7157B"/>
+      <g fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round">
+        <circle cx="29" cy="29" r="14"/><path d="M39 39l11 11"/>
+        <path d="M22 34v-4M29 34v-9M36 34v-6" stroke-width="2.6"/>
+      </g>
+    </symbol>
+    <symbol id="iam" viewBox="0 0 64 64">
+      <rect width="64" height="64" rx="9" fill="#DD344C"/>
+      <g fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round">
+        <circle cx="32" cy="23" r="8"/><path d="M15 50q0-14 17-14t17 14z" stroke-linejoin="round"/>
+      </g>
+    </symbol>
+    <style>
+      .t{fill:#232F3E}.s{fill:#5F6B7A}.b{font-weight:700}
+      .halo{paint-order:stroke;stroke:#fff;stroke-width:4;stroke-linejoin:round}
+    </style>
+  </defs>
+
+  <rect width="1280" height="870" fill="#fff"/>
+
+  <!-- Judul -->
+  <text x="640" y="38" text-anchor="middle" font-size="24" class="t b">Topologi Arsitektur AWS: Website Profil UMKM</text>
+  <text x="640" y="60" text-anchor="middle" font-size="13" class="s">LKS SMK Tingkat Provinsi Sumatera Barat · Bidang Cloud Computing · Bagian A + B</text>
+
+  <!-- AWS Cloud -->
+  <rect x="205" y="110" width="1050" height="670" rx="10" fill="#FBFCFD" stroke="#232F3E" stroke-width="1.6"/>
+  <rect x="219" y="121" width="26" height="20" rx="4" fill="#232F3E"/>
+  <text x="232" y="136" text-anchor="middle" font-size="11" font-weight="700" fill="#FF9900">aws</text>
+  <text x="253" y="136" font-size="14" class="t b">AWS Cloud</text>
+
+  <!-- VPC -->
+  <rect x="235" y="148" width="715" height="602" rx="10" fill="#FDFBFF" stroke="#8C4FFF" stroke-width="2"/>
+  <text x="252" y="170" font-size="13" font-weight="700" fill="#8C4FFF">VPC · vpc-umkm · 10.0.0.0/16</text>
+
+  <!-- AZ A -->
+  <rect x="525" y="180" width="405" height="250" rx="8" fill="none" stroke="#147EBA" stroke-width="1.4" stroke-dasharray="6 4"/>
+  <text x="540" y="198" font-size="12" font-weight="700" fill="#147EBA">Availability Zone A</text>
+  <rect x="545" y="207" width="365" height="208" rx="8" fill="#F2F8EE" stroke="#7AA116" stroke-width="1.5"/>
+  <text x="558" y="404" font-size="11.5" font-weight="600" fill="#5B7A0F">Public Subnet A · 10.0.1.0/24</text>
+  <rect x="772" y="389" width="128" height="20" rx="10" fill="#FFF4E5" stroke="#ED7100"/>
+  <text x="836" y="403" text-anchor="middle" font-size="10.5" fill="#B35400">web-sg · HTTP 80</text>
+
+  <!-- AZ B -->
+  <rect x="525" y="460" width="405" height="270" rx="8" fill="none" stroke="#147EBA" stroke-width="1.4" stroke-dasharray="6 4"/>
+  <text x="540" y="478" font-size="12" font-weight="700" fill="#147EBA">Availability Zone B</text>
+  <rect x="545" y="487" width="365" height="228" rx="8" fill="#F2F8EE" stroke="#7AA116" stroke-width="1.5"/>
+  <text x="558" y="704" font-size="11.5" font-weight="600" fill="#5B7A0F">Public Subnet B · 10.0.2.0/24</text>
+  <rect x="772" y="689" width="128" height="20" rx="10" fill="#FFF4E5" stroke="#ED7100"/>
+  <text x="836" y="703" text-anchor="middle" font-size="10.5" fill="#B35400">web-sg · HTTP 80</text>
+
+  <!-- Catatan di subnet B -->
+  <text x="705" y="545" font-size="11.5" class="s">Jika salah satu instance mati (B5),</text>
+  <text x="705" y="562" font-size="11.5" class="s">ALB hanya meneruskan trafik ke</text>
+  <text x="705" y="579" font-size="11.5" class="s">instance yang lolos health check.</text>
+
+  <!-- Garis alur -->
+  <g fill="none" stroke="#232F3E" stroke-width="2" stroke-linejoin="round">
+    <path d="M106 445H217" marker-end="url(#aMain)"/>
+    <path d="M253 445H290" marker-end="url(#aMain)"/>
+    <path d="M356 445H398" marker-end="url(#aMain)"/>
+    <path d="M480 445H500V225H800V252" marker-end="url(#aMain)"/>
+    <path d="M500 285H586" marker-end="url(#aMain)"/>
+    <path d="M500 445V585H586" marker-end="url(#aMain)"/>
+  </g>
+  <!-- Gambar langsung dari S3 -->
+  <path d="M78 417V92H1100V246" fill="none" stroke="#147EBA" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#aBlue)"/>
+  <!-- CloudWatch -->
+  <path d="M930 445H1066" fill="none" stroke="#E7157B" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#aPink)"/>
+  <text x="998" y="437" text-anchor="middle" font-size="10.5" fill="#E7157B">metrik EC2</text>
+  <!-- IAM -->
+  <path d="M1068 625H932" fill="none" stroke="#DD344C" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#aRed)"/>
+  <text x="1000" y="617" text-anchor="middle" font-size="10.5" fill="#DD344C">instance profile</text>
+
+  <!-- Pengunjung -->
+  <circle cx="78" cy="445" r="28" fill="#EAEFF3" stroke="#232F3E" stroke-width="1.6"/>
+  <circle cx="78" cy="437" r="8" fill="none" stroke="#232F3E" stroke-width="2.4"/>
+  <path d="M63 459q0-12 15-12t15 12z" fill="none" stroke="#232F3E" stroke-width="2.4" stroke-linejoin="round"/>
+  <text x="78" y="490" text-anchor="middle" font-size="12" class="t b">Pengunjung</text>
+  <text x="78" y="505" text-anchor="middle" font-size="11" class="s">via Internet</text>
+
+  <!-- IGW -->
+  <use href="#igw" xlink:href="#igw" x="217" y="427" width="36" height="36"/>
+  <text x="235" y="418" text-anchor="middle" font-size="11" class="t b halo">Internet Gateway</text>
+
+  <!-- ALB -->
+  <use href="#alb" xlink:href="#alb" x="290" y="413" width="66" height="66"/>
+  <text x="323" y="497" text-anchor="middle" font-size="11.5" class="t b">Application</text>
+  <text x="323" y="511" text-anchor="middle" font-size="11.5" class="t b">Load Balancer</text>
+  <text x="323" y="525" text-anchor="middle" font-size="10.5" class="s">alb-web-umkm</text>
+  <rect x="240" y="536" width="166" height="20" rx="10" fill="#FFF4E5" stroke="#ED7100"/>
+  <text x="323" y="550" text-anchor="middle" font-size="10.5" fill="#B35400">alb-sg · 80/443 dari internet</text>
+
+  <!-- Target Group -->
+  <rect x="400" y="415" width="80" height="60" rx="8" fill="#fff" stroke="#8C4FFF" stroke-width="1.6"/>
+  <text x="440" y="441" text-anchor="middle" font-size="11.5" class="t b">Target</text>
+  <text x="440" y="456" text-anchor="middle" font-size="11.5" class="t b">Group</text>
+  <text x="440" y="492" text-anchor="middle" font-size="10.5" fill="#248814" font-weight="600">health check ✓</text>
+  <text x="440" y="506" text-anchor="middle" font-size="10.5" class="s">tg-web-umkm</text>
+
+  <!-- EC2 -->
+  <use href="#ec2" xlink:href="#ec2" x="588" y="253" width="64" height="64"/>
+  <text x="620" y="337" text-anchor="middle" font-size="12" class="t b">web-1</text>
+  <text x="620" y="352" text-anchor="middle" font-size="10.5" class="s">EC2 · Web Server</text>
+
+  <rect x="745" y="243" width="110" height="135" rx="8" fill="none" stroke="#ED7100" stroke-width="1.4" stroke-dasharray="4 3"/>
+  <use href="#ec2" xlink:href="#ec2" x="768" y="253" width="64" height="64"/>
+  <text x="800" y="337" text-anchor="middle" font-size="12" class="t b">web-3</text>
+  <text x="800" y="352" text-anchor="middle" font-size="10.5" class="s">EC2 · Web Server</text>
+  <text x="800" y="364" text-anchor="middle" font-size="10" fill="#B35400" font-weight="600">tambahan (B2)</text>
+
+  <use href="#ec2" xlink:href="#ec2" x="588" y="553" width="64" height="64"/>
+  <text x="620" y="637" text-anchor="middle" font-size="12" class="t b">web-2</text>
+  <text x="620" y="652" text-anchor="middle" font-size="10.5" class="s">EC2 · Web Server</text>
+
+  <!-- Badge langkah -->
+  <g font-size="12" font-weight="700" text-anchor="middle" fill="#fff">
+    <circle cx="160" cy="445" r="11" fill="#232F3E"/><text x="160" y="449.5">1</text>
+    <circle cx="500" cy="360" r="11" fill="#232F3E"/><text x="500" y="364.5">2</text>
+    <circle cx="640" cy="92" r="11" fill="#147EBA"/><text x="640" y="96.5">3</text>
+  </g>
+  <text x="660" y="86" font-size="12" font-weight="600" fill="#147EBA">Gambar/logo diambil langsung dari S3 (HTTPS), bukan dari instance</text>
+
+  <!-- S3 -->
+  <use href="#s3" xlink:href="#s3" x="1068" y="253" width="64" height="64"/>
+  <text x="1100" y="338" text-anchor="middle" font-size="12.5" class="t b">Amazon S3</text>
+  <text x="1100" y="354" text-anchor="middle" font-size="11" class="s">bucket: aset-umkm</text>
+  <text x="1100" y="369" text-anchor="middle" font-size="11" class="s">logo.png (objek publik)</text>
+
+  <!-- CloudWatch -->
+  <use href="#cw" xlink:href="#cw" x="1068" y="413" width="64" height="64"/>
+  <text x="1100" y="498" text-anchor="middle" font-size="12.5" class="t b">Amazon CloudWatch</text>
+  <text x="1100" y="514" text-anchor="middle" font-size="11" class="s">metrik CPU &amp; status check</text>
+  <text x="1100" y="529" text-anchor="middle" font-size="11" class="s">(A3: status instance normal)</text>
+
+  <!-- IAM -->
+  <use href="#iam" xlink:href="#iam" x="1068" y="593" width="64" height="64"/>
+  <text x="1100" y="678" text-anchor="middle" font-size="12.5" class="t b">IAM Role</text>
+  <text x="1100" y="694" text-anchor="middle" font-size="11" class="s">ec2-s3-role</text>
+  <text x="1100" y="709" text-anchor="middle" font-size="11" class="s">akses S3 secukupnya</text>
+
+  <!-- Legenda -->
+  <g font-size="12.5" class="t">
+    <text x="205" y="808"><tspan font-weight="700">1</tspan>  Pengunjung masuk lewat Internet Gateway ke Application Load Balancer (HTTP 80)</text>
+    <text x="205" y="829"><tspan font-weight="700">2</tspan>  ALB meneruskan lewat Target Group hanya ke instance yang sehat, tersebar di 2 AZ</text>
+    <text x="205" y="850"><tspan font-weight="700">3</tspan>  Aset statis dilayani dari S3; arsitektur tanpa NAT Gateway untuk efisiensi biaya (B6)</text>
+  </g>
+</svg>
